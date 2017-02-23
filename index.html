@@ -4,6 +4,7 @@
 D = 
 [
 
+40,7,
 0,1,
 40,1,
 0,1,
@@ -325,26 +326,123 @@ D =
 3,3,
 40,1,
 0,11,
-40,1
+40,3,
+2,2,
+40,2,
+0,7,
+40,1,
+-7,1,
+40,1,
+0,5,
+40,9,
+7,2,
+40,1,
+0,2,
+40,1,
+0,2,
+40,1,
+0,2,
+-1,23,
+40,2,
+-9,1,
+2,2,
+40,1,
+0,8,
 
+40,4,
+0,2,
+1,1,
+40,1,
+-1,12,
+3,2,
+40,2,
+0,2,
+40,2,
+-1,1,
+40,1,
+0,2,
+40,2,
+0,5,
 
+40,13,
+1,2,
+2,1,
+40,1,
+0,11,
+-2,1,
+-2,3,
+40,1,
+4,16,
+40,4,
+-7,2,
+2,24,
+8,1,
+40,1,
+0,9,
+40,1,
+0,1,
+40,1,
+2,3,
+40,1,
+-2,7,
+40,5,
+0,2,
+40,2,
+0,3,
+-3,2,
+40,2,
+0,1,
+40,1,
+0,2,
+-3,2,
+40,17,
+
+6,3,
+40,2,
+0,2,
+2,10,
+-2,5,
+40,13,
+-3,4,
+3,4,
+2,4,
+-2,16,
 ];
 
 d="";
 for(i=0;i<D.length;i++){
+  //if(D[i]==0){
+  //  d+=String.fromCharCode(D[i+1]+40+40+25).replace("\\","\\\\");
+  //  i++;
+  //}
   if(D[i]==40){
-    d+=String.fromCharCode(D[i+1]+40+40);
+    d+=String.fromCharCode(D[i+1]+40+40).replace("\\","\\\\");
     i++;
   }
   else{
-    d+=String.fromCharCode(D[i]+40);
+    d+=String.fromCharCode(D[i]+40).replace("\\","\\\\");
   }
 }
 console.log(d);
 
-d="FGnGFGCHDHKHnGAGHHnWIGnGFGnGCHDGnGKInGIHGHnXBHCHDGnGKInGCHDHnXOInGFMnKGInGEPnHIHnHFGEOnHFHnGFKnNIInGFH=InGFGnGFJnVFHnHHJHGnGn]KJnGFNnIFGHInGDMnKHHnJFL?GnGFLnRMInGDGHOnHDGDHnGHGHPnH=GnGHHnGHHnGFZnHNHnHFNnHFGnGHInFDNnJFHnHFHCInGFGnGFHCLnSLJnGFHHMnGDKnS:GnGHInGHInGFMnPFGnGFMnGKMnGATnGDInGFHnGDHnGFMnGHHnTHOnGGJnHEPnHKInGFHDGnGFGnGFZnHHJnGFMnHFOnO=HnHHJHGnGFZnHIJnGFMnIFGHInGDMnKHHnJFL?GnGFLnRMInGDHHNnHDGDHnGHGHT=GHHnGHHnGFXnJNHnHFNnHFGnGHInGDNnJFHnHFHCInGFGnGFHCLnSLJnGFHHMnGDKnS:GnGHInGHInGFMnPFGnGFMnGKMnGATDInGFHnGDHnGFMnGHHnRHGnGFOnGGJnHERKInGFHDGnGFGnGFZnJHJnGFPnIFOnN=GHHH\\nJKInGFQnGIInGFTnGFZnPAInGFRIInGFQnG";
-d="()Q()%*&*-*Q#)**a+)Q()Q%*&)Q-+Q+*)*b$*%*&)Q-+Q%*&*b1+Q(/U)+Q'2R+*R()'1R(*Q(-X++Q(*+Q()Q(,`(*R*,*)Qg-,Q(0S()*+Q&/U**T(.!)Q(.\/+Q&)*1R&)&*Q*)*2R)Q**Q**Q(<R0*R(0R()Q*+P&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6Q&+Q(*Q&*Q(/Q**^*1Q),R'2R-+Q(*&)Q()Q(<R*,Q(/R(1Y*R*,*)Q(<R+,Q(/S()*+Q&/U**T(.!)Q(.\/+Q&**0R&)&*Q*)*6)**Q**Q(:T0*R(0R()Q*+Q&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6&+Q(*Q&*Q(/Q**\*)Q(1Q),R'4-+Q(*&)Q()Q(<T*,Q(2S(1X)***>T-+Q(3Q++Q(6Q(<Z#+Q(4++Q(3Q";
-f=880;t=1;with(new AudioContext())for(i=0;i<d.length;i+=2){d.charCodeAt(i)-70>39?t+=.12*(d.charCodeAt(i+1)-70):(o=createOscillator(),o.connect(destination),o.frequency.value=f*=Math.pow(Math.pow(2,1/12),d.charCodeAt(i)-70),o.start(t),o.stop(t+=.12*(d.charCodeAt(i+1)-70)))}
-//b.bgColor=0;
-//b.innerHTML="<center style=font:40vh/40vh''>🕺<sup>🎵";
+
+//d="W()Q()%*&*-*Q#)**a+)Q()Q%*&)Q-+Q+*)*b$*%*&)Q-+Q%*&*b1+Q(/U)+Q'2R+*R()'1R(*Q(-X++Q(*+Q()Q(,`(*R*,*)Qg-,Q(0S()*+Q&/U**T(.!)Q(.\\/+Q&)*1R&)&*Q*)*2R)Q**Q**Q(<R0*R(0R()Q*+P&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6Q&+Q(*Q&*Q(/Q**^*1Q),R'2R-+Q(*&)Q()Q(<R*,Q(/R(1Y*R*,*)Q(<R+,Q(/S()*+Q&/U**T(.!)Q(.\\/+Q&**0R&)&*Q*)*6)**Q**Q(:T0*R(0R()Q*+Q&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6&+Q(*Q&*Q(/Q**\\*)Q(1Q),R'4-+Q(*&)Q()Q(<T*,Q(2S(1X)***>T-+Q(3Q++Q(6Q(<Z#+Q(4++Q(3S**R(/Q!)Q(-Y/*Q(*Q(*Q(*'?R)**Q(0T(*))Q'4+*R(*Q()')Q(*R(-])**)";
+b.innerHTML="<center style=font:100px/99vh''>🎵";
+f=880;with(new AudioContext())
+for(b.bgColor=t=i=0;i<d.length;i++){
+  d.charCodeAt(i)-40>39
+  ?
+    t+=.12*(d.charCodeAt(i)-40-40)
+  :
+  (
+    o=createOscillator(),
+    o.connect(destination),
+    o.frequency.value=f*=Math.pow(Math.pow(2,1/12),
+    d.charCodeAt(i)-40),
+    o.start(t),
+    o.stop(t+=.12*(d.charCodeAt(i+1)-40)),
+    i++
+  )
+}
+
 </script>
