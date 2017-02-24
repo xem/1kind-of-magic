@@ -37,7 +37,6 @@ D =
 40,1,
 -3,2,
 -2,2,
-
 40,18,
 9,3,
 40,1,
@@ -396,7 +395,6 @@ D =
 0,2,
 -3,2,
 40,17,
-
 6,3,
 40,2,
 0,2,
@@ -407,6 +405,97 @@ D =
 3,4,
 2,4,
 -2,16,
+
+/*
+
+40,10,
+-10,6,
+40,1,
+-2,6,
+40,11,
+5,10,
+40,1,
+0,2,
+40,3,
+4,14,
+3,4,
+-2,10,
+-5,3,
+40,1,
+0,6,
+40,6,
+0,4,
+3,8,
+40,3,
+0,5,
+40,6,
+2,7,
+40,1,
+-2,2,
+40,8,
+2,2,
+40,1,
+0,2,
+40,1,
+0,2,
+40,1,
+0,2,
+40,1,
+0,2,
+40,1,
+0,1,
+40,1,
+0,2,
+40,1,
+0,2,
+40,1,
+0,2,
+4,3,
+40,1,
+-2,3,
+40,5,
+-5,1,
+3,2,
+40,1,
+0,3,
+40,1,
+0,1,
+2,3,
+-2,3,
+40,1,
+-3,2,
+40,3,
+0,4,
+3,1,
+2,2,
+40,1,
+-2,4,
+40,1,
+-12,2,
+40,1,
+2,2,
+2,3,
+40,11,
+3,8,
+40,6,
+2,1,
+40,1,
+0,8,
+40,2,
+0,2,
+3,1,*/
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 d="";
@@ -423,13 +512,49 @@ for(i=0;i<D.length;i++){
     d+=String.fromCharCode(D[i]+40).replace("\\","\\\\");
   }
 }
-console.log(d);
+//console.log(d);
 
 
-//d="W()Q()%*&*-*Q#)**a+)Q()Q%*&)Q-+Q+*)*b$*%*&)Q-+Q%*&*b1+Q(/U)+Q'2R+*R()'1R(*Q(-X++Q(*+Q()Q(,`(*R*,*)Qg-,Q(0S()*+Q&/U**T(.!)Q(.\\/+Q&)*1R&)&*Q*)*2R)Q**Q**Q(<R0*R(0R()Q*+P&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6Q&+Q(*Q&*Q(/Q**^*1Q),R'2R-+Q(*&)Q()Q(<R*,Q(/R(1Y*R*,*)Q(<R+,Q(/S()*+Q&/U**T(.!)Q(.\\/+Q&**0R&)&*Q*)*6)**Q**Q(:T0*R(0R()Q*+Q&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6&+Q(*Q&*Q(/Q**\\*)Q(1Q),R'4-+Q(*&)Q()Q(<T*,Q(2S(1X)***>T-+Q(3Q++Q(6Q(<Z#+Q(4++Q(3S**R(/Q!)Q(-Y/*Q(*Q(*Q(*'?R)**Q(0T(*))Q'4+*R(*Q()')Q(*R(-])**)";
-b.innerHTML="<center style=font:100px/99vh''>🎵";
+d="W()Q()%*&*-*Q#)**a+)Q()Q%*&)Q-+Q+*)*b$*%*&)Q-+Q%*&*b1+Q(/U)+Q'2R+*R()'1R(*Q(-X++Q(*+Q()Q(,`(*R*,*)Qg-,Q(0S()*+Q&/U**T(.!)Q(.\\/+Q&)*1R&)&*Q*)*2R)Q**Q**Q(<R0*R(0R()Q*+P&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6Q&+Q(*Q&*Q(/Q**^*1Q),R'2R-+Q(*&)Q()Q(<R*,Q(/R(1Y*R*,*)Q(<R+,Q(/S()*+Q&/U**T(.!)Q(.\\/+Q&**0R&)&*Q*)*6)**Q**Q(:T0*R(0R()Q*+Q&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6&+Q(*Q&*Q(/Q**\\*)Q(1Q),R'4-+Q(*&)Q()Q(<T*,Q(2S(1X)***>T-+Q(3Q++Q(6Q(<Z#+Q(4++Q(3S**R(/Q!)Q(-Y/*Q(*Q(*Q(*'?R)**Q(0T(*))Q'4+*R(*R')Q(*R(-])**)Q(3&)&+Q,8T!**@0)Q(1Q()Q*+Q&/U(*R(+%*R()Q(*%*a.+R(**2&-]%,+,*,&8";
+
+s=speechSynthesis;
+setTimeout(e=>{
+  u=new(SpeechSynthesisUtterance)("It's a kind of magic");
+  v=s.getVoices();
+  for(i in v){
+    if(v[i].lang.slice(0,2)=="en"){
+      u.voice=v[i];
+    }
+  }
+  s.speak(u);
+},600);
+
+setTimeout(e=>{
+  u=new(SpeechSynthesisUtterance)("It's a kind of magic");
+  v=s.getVoices();
+  for(i in v){
+    if(v[i].lang.slice(0,2)=="en"){
+      u.voice=v[i];
+    }
+  }
+  s.speak(u);
+},4500);
+
+setTimeout(e=>{
+  u=new(SpeechSynthesisUtterance)("a kind of magic");
+  v=s.getVoices();
+  for(i in v){
+    if(v[i].lang.slice(0,2)=="en"){
+      u.voice=v[i];
+    }
+  }
+  s.speak(u);
+},8600);
+
+b.innerHTML="<center style=font:100px/99vh''>🕺<sup>🎵";
+
 f=880;with(new AudioContext())
-for(b.bgColor=t=i=0;i<d.length;i++){
+for(t=i=0;i<d.length;i++){
   d.charCodeAt(i)-40>39
   ?
     t+=.12*(d.charCodeAt(i)-40-40)
@@ -437,12 +562,30 @@ for(b.bgColor=t=i=0;i<d.length;i++){
   (
     o=createOscillator(),
     o.connect(destination),
-    o.frequency.value=f*=Math.pow(Math.pow(2,1/12),
-    d.charCodeAt(i)-40),
+    setTimeout('b.bgColor="hsl('+(o.frequency.value=f*=Math.pow(Math.pow(2,1/12),d.charCodeAt(i)-40))+',50%,50%)"',t*1000),
     o.start(t),
     o.stop(t+=.12*(d.charCodeAt(i+1)-40)),
     i++
   )
+}
+
+
+f=220;with(new AudioContext())
+for(t=26,i=0;i<900;i++){
+  o=createOscillator(),
+  o.connect(destination),
+  o.frequency.value=f*=Math.pow(Math.pow(2,1/12),[0,0,4,-4][i%4]),
+  o.start(t+=.12),
+  o.stop(t+=.12)
+}
+
+f=220;with(new AudioContext())
+for(t=12,i=0;i<58;i++){
+  o=createOscillator(),
+  o.connect(destination),
+  o.frequency.value=220,
+  o.start(t+=.12),
+  o.stop(t+=.12)
 }
 
 </script>
