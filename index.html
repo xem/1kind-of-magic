@@ -498,6 +498,7 @@ D =
 
 ];
 
+/*
 d="";
 for(i=0;i<D.length;i++){
   //if(D[i]==0){
@@ -512,80 +513,59 @@ for(i=0;i<D.length;i++){
     d+=String.fromCharCode(D[i]+40).replace("\\","\\\\");
   }
 }
+*/
 //console.log(d);
 
-
-d="W()Q()%*&*-*Q#)**a+)Q()Q%*&)Q-+Q+*)*b$*%*&)Q-+Q%*&*b1+Q(/U)+Q'2R+*R()'1R(*Q(-X++Q(*+Q()Q(,`(*R*,*)Qg-,Q(0S()*+Q&/U**T(.!)Q(.\\/+Q&)*1R&)&*Q*)*2R)Q**Q**Q(<R0*R(0R()Q*+P&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6Q&+Q(*Q&*Q(/Q**^*1Q),R'2R-+Q(*&)Q()Q(<R*,Q(/R(1Y*R*,*)Q(<R+,Q(/S()*+Q&/U**T(.!)Q(.\\/+Q&**0R&)&*Q*)*6)**Q**Q(:T0*R(0R()Q*+Q&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6&+Q(*Q&*Q(/Q**\\*)Q(1Q),R'4-+Q(*&)Q()Q(<T*,Q(2S(1X)***>T-+Q(3Q++Q(6Q(<Z#+Q(4++Q(3S**R(/Q!)Q(-Y/*Q(*Q(*Q(*'?R)**Q(0T(*))Q'4+*R(*R')Q(*R(-])**)Q(3&)&+Q,8T!**@0)Q(1Q()Q*+Q&/U(*R(+%*R()Q(*%*a.+R(**2&-]%,+,*,&8";
+/*
+for(i in m={
+  400:"It's a kind of magic",
+  4500: "It's a kind of magic",
+  8600: "a kind of magic",
+  12000: "One dream",
+  14000: "one soul",
+  16000: "one prize",
+  18000: "one goal",
+  20000: "One golden glance",
+  23800: "of what should be",
+  26000: "It's a kind of magic"  
+}){
+  setTimeout("u=new(SpeechSynthesisUtterance)(`"+m[i]+"`);v=s.getVoices();for(i in v){if(v[i].lang.slice(0,2)=='en'){u.voice=v[i]}}s.speak(u)",i)
+}
+*/
+//Math.pow(2,1/12)
 
 s=speechSynthesis;
-setTimeout(e=>{
-  u=new(SpeechSynthesisUtterance)("It's a kind of magic");
-  v=s.getVoices();
-  for(i in v){
-    if(v[i].lang.slice(0,2)=="en"){
-      u.voice=v[i];
-    }
-  }
-  s.speak(u);
-},600);
-
-setTimeout(e=>{
-  u=new(SpeechSynthesisUtterance)("It's a kind of magic");
-  v=s.getVoices();
-  for(i in v){
-    if(v[i].lang.slice(0,2)=="en"){
-      u.voice=v[i];
-    }
-  }
-  s.speak(u);
-},4500);
-
-setTimeout(e=>{
-  u=new(SpeechSynthesisUtterance)("a kind of magic");
-  v=s.getVoices();
-  for(i in v){
-    if(v[i].lang.slice(0,2)=="en"){
-      u.voice=v[i];
-    }
-  }
-  s.speak(u);
-},8600);
-
-b.innerHTML="<center style=font:100px/99vh''>🕺<sup>🎵";
-
-f=880;with(new AudioContext())
+setTimeout("u=new(SpeechSynthesisUtterance)(`it's a kind of magic`);for(i of v=s.getVoices())if(i.lang.match(/en/))u.voice=i;s.speak(u)",500);
+b.innerHTML="<center style=font:9em/99vh''>🕺<sup>🎵";
+d="W()Q()%*&*-*Q#)**a+)Q()Q%*&)Q-+Q+*)*b$*%*&)Q-+Q%*&*b1+Q(/U)+Q'2R+*R()'1R(*Q(-X++Q(*+Q()Q(,`(*R*,*)Qg-,Q(0S()*+Q&/U**T(.!)Q(.\\/+Q&)*1R&)&*Q*)*2R)Q**Q**Q(<R0*R(0R()Q*+P&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6Q&+Q(*Q&*Q(/Q**^*1Q),R'2R-+Q(*&)Q()Q(<R*,Q(/R(1Y*R*,*)Q(<R+,Q(/S()*+Q&/U**T(.!)Q(.\\/+Q&**0R&)&*Q*)*6)**Q**Q(:T0*R(0R()Q*+Q&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6&+Q(*Q&*Q(/Q**\\*)Q(1Q),R'4-+Q(*&)Q()Q(<T*,Q(2S(1X)***>T-+Q(3Q++Q(6Q(<Z#+Q(4++Q(3S**R(/Q!)Q(-Y/*Q(*Q(*Q(*'?R)**Q(0T(*))Q'4+*R(*R')Q(*R(-])**)Q(3&)&+Q,8T!**@0)Q(1Q()Q*+Q&/U(*R(+%*R()Q(*%*a.+R(**2&-]%,+,*,&8";
+f=880;
+with(new AudioContext())
 for(t=i=0;i<d.length;i++){
-  d.charCodeAt(i)-40>39
+  d.charCodeAt(i)>79
   ?
-    t+=.12*(d.charCodeAt(i)-40-40)
+    t+=.11*(d.charCodeAt(i)-80)
   :
   (
     o=createOscillator(),
-    o.connect(destination),
-    setTimeout('b.bgColor="hsl('+(o.frequency.value=f*=Math.pow(Math.pow(2,1/12),d.charCodeAt(i)-40))+',50%,50%)"',t*1000),
+    g=createGain(),
+    g.gain.value=.005,
+    o.connect(g),
+    g.connect(destination),
+    setTimeout('b.style.background="hsl('+((o.frequency.value=f*=Math.pow(1.06,d.charCodeAt(i)-40))/9+99)+',50%,50%)"',t*1000),
     o.start(t),
-    o.stop(t+=.12*(d.charCodeAt(i+1)-40)),
+    o.stop(t+=.11*(d.charCodeAt(i+1)-40)),
     i++
   )
 }
-
-
 f=220;with(new AudioContext())
-for(t=26,i=0;i<900;i++){
+for(t=12,i=0;i<730;i++){
   o=createOscillator(),
-  o.connect(destination),
-  o.frequency.value=f*=Math.pow(Math.pow(2,1/12),[0,0,4,-4][i%4]),
-  o.start(t+=.12),
-  o.stop(t+=.12)
+  g=createGain(),
+  g.gain.value=.01,
+  o.connect(g),
+  g.connect(destination),
+  o.frequency.value=f*=i<58?1:Math.pow(1.06,[0,0,4,-4][i%4]),
+  o.start(t+=.11),
+  o.stop(t+=.11)
 }
-
-f=220;with(new AudioContext())
-for(t=12,i=0;i<58;i++){
-  o=createOscillator(),
-  o.connect(destination),
-  o.frequency.value=220,
-  o.start(t+=.12),
-  o.stop(t+=.12)
-}
-
 </script>
