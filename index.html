@@ -1,9 +1,10 @@
 ﻿<body id=b>
 <script>
-// 40 = silence
+
+/* data encoding */
+
 D = 
 [
-
 40,7,
 0,1,
 40,1,
@@ -405,166 +406,54 @@ D =
 3,4,
 2,4,
 -2,16,
-
-/*
-
-40,10,
--10,6,
-40,1,
--2,6,
-40,11,
-5,10,
-40,1,
-0,2,
-40,3,
-4,14,
-3,4,
--2,10,
--5,3,
-40,1,
-0,6,
-40,6,
-0,4,
-3,8,
-40,3,
-0,5,
-40,6,
-2,7,
-40,1,
--2,2,
-40,8,
-2,2,
-40,1,
-0,2,
-40,1,
-0,2,
-40,1,
-0,2,
-40,1,
-0,2,
-40,1,
-0,1,
-40,1,
-0,2,
-40,1,
-0,2,
-40,1,
-0,2,
-4,3,
-40,1,
--2,3,
-40,5,
--5,1,
-3,2,
-40,1,
-0,3,
-40,1,
-0,1,
-2,3,
--2,3,
-40,1,
--3,2,
-40,3,
-0,4,
-3,1,
-2,2,
-40,1,
--2,4,
-40,1,
--12,2,
-40,1,
-2,2,
-2,3,
-40,11,
-3,8,
-40,6,
-2,1,
-40,1,
-0,8,
-40,2,
-0,2,
-3,1,*/
-
-
-
-
-
-
-
-
-
-
-
-
 ];
 
-/*
 d="";
 for(i=0;i<D.length;i++){
-  //if(D[i]==0){
-  //  d+=String.fromCharCode(D[i+1]+40+40+25).replace("\\","\\\\");
-  //  i++;
-  //}
   if(D[i]==40){
-    d+=String.fromCharCode(D[i+1]+40+40).replace("\\","\\\\");
+    d+=String.fromCharCode(D[i+1]+97).replace("\\","\\\\");
     i++;
   }
   else{
-    d+=String.fromCharCode(D[i]+40).replace("\\","\\\\");
+    d+=String.fromCharCode(D[i]+50).replace("\\","\\\\");
   }
 }
-*/
-//console.log(d);
+console.log(d);
 
-/*
-for(i in m={
-  400:"It's a kind of magic",
-  4500: "It's a kind of magic",
-  8600: "a kind of magic",
-  12000: "One dream",
-  14000: "one soul",
-  16000: "one prize",
-  18000: "one goal",
-  20000: "One golden glance",
-  23800: "of what should be",
-  26000: "It's a kind of magic"  
-}){
-  setTimeout("u=new(SpeechSynthesisUtterance)(`"+m[i]+"`);v=s.getVoices();for(i in v){if(v[i].lang.slice(0,2)=='en'){u.voice=v[i]}}s.speak(u)",i)
-}
-*/
-//Math.pow(2,1/12)
+/* entry golfing  */
 
 s=speechSynthesis;
-setTimeout("u=new(SpeechSynthesisUtterance)(`it's a kind of magic`);for(i of v=s.getVoices())if(i.lang.match(/en/))u.voice=i;s.speak(u)",500);
-b.innerHTML="<center style=font:9em/99vh''>🕺<sup>🎵";
-d="W()Q()%*&*-*Q#)**a+)Q()Q%*&)Q-+Q+*)*b$*%*&)Q-+Q%*&*b1+Q(/U)+Q'2R+*R()'1R(*Q(-X++Q(*+Q()Q(,`(*R*,*)Qg-,Q(0S()*+Q&/U**T(.!)Q(.\\/+Q&)*1R&)&*Q*)*2R)Q**Q**Q(<R0*R(0R()Q*+P&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6Q&+Q(*Q&*Q(/Q**^*1Q),R'2R-+Q(*&)Q()Q(<R*,Q(/R(1Y*R*,*)Q(<R+,Q(/S()*+Q&/U**T(.!)Q(.\\/+Q&**0R&)&*Q*)*6)**Q**Q(:T0*R(0R()Q*+Q&0T(*R(*%+Q()Q(*%.].,Q(**/Q&-])Q*+Q*+Q(/Z()Q(/Q-/Q#6&+Q(*Q&*Q(/Q**\\*)Q(1Q),R'4-+Q(*&)Q()Q(<T*,Q(2S(1X)***>T-+Q(3Q++Q(6Q(<Z#+Q(4++Q(3S**R(/Q!)Q(-Y/*Q(*Q(*Q(*'?R)**Q(0T(*))Q'4+*R(*R')Q(*R(-])**)Q(3&)&+Q,8T!**@0)Q(1Q()Q*+Q&/U(*R(+%*R()Q(*%*a.+R(**2&-]%,+,*,&8";
-f=880;
+setTimeout("u=new(SpeechSynthesisUtterance)('its a kind of magic');for(i of s.getVoices())if(i.lang.match(/en/))u.voice=i;s.speak(u)",500);
+//setTimeout("u=new(SpeechSynthesisUtterance)('its a kind of magic');for(i of s.getVoices())if(i.lang.match(/en/))u.voice=i;s.speak(u)",4200);
+//setTimeout("u=new(SpeechSynthesisUtterance)('a kind of magic');for(i of s.getVoices())if(i.lang.match(/en/))u.voice=i;s.speak(u)",8100);
+b.innerHTML="<center style=font:9em/99vh''>🕺<sup>🎵<sub>✨";
+d="h23b23/40474b-344r53b23b/403b75b5434s.4/403b75b/404s;5b29f35b1<c54c231;c24b27i55b24)5b23b26q24c4643bx76b2:d2345b09f44e28+3b28m95b034;c0304b434<c)3b44b44b2Fc:4c2:c23b45a0:e24c24/5b23b24/8n86b2449b07n&3b45b45b29k23b29b79b-@b05b24b04b29b44o4;b36c1<c75b2403b23b2Fc46b29c2;j)4c4643b2Fc56b29d2345b09f44e28+3b28m95b044:c0304b434@)344b44b2De:4c2:c23b45b0:e24c24/5b23b24/8n86b2449b07n&3b45b45b29k23b29b79b-@05b24b04b29b44m43b2;b36c1>75b2403b23b2Fe46b2<d2;i)3444He75b2=b55b2@b2Fk-5b2>55b2=d44c29b+3b27j94b24b24b241Ic)344b2:e2433b1>54c24c13b24c27n3443b2=0305b6Be+44J:3b2;b23b45b09f24c25/4c23b24/4r85c244<07n/656460B";
 with(new AudioContext())
-for(t=i=0;i<d.length;i++){
-  d.charCodeAt(i)>79
+for(f=880,t=i=0;i<604;i++){
+  d.charCodeAt(i)>96
   ?
-    t+=.11*(d.charCodeAt(i)-80)
+    t+=.11*(d.charCodeAt(i)-97)
   :
   (
     o=createOscillator(),
     g=createGain(),
-    g.gain.value=.005,
     o.connect(g),
     g.connect(destination),
-    setTimeout('b.style.background="hsl('+((o.frequency.value=f*=Math.pow(1.06,d.charCodeAt(i)-40))/9+99)+',50%,50%)"',t*1000),
+    o.frequency.value=f*=Math.pow(1.06,d.charCodeAt(i)-50),
+    g.gain.value=.005,
     o.start(t),
-    o.stop(t+=.11*(d.charCodeAt(i+1)-40)),
-    i++
+    o.stop(t+=.11*(d.charCodeAt(++i)-50)),
+    setTimeout('b.style.background="hsl('+i*9+',50%,50%)"',t*999)
   )
 }
-f=220;with(new AudioContext())
-for(t=12,i=0;i<730;i++){
+with(new AudioContext())
+for(t=12,i=0;i<720;i++){
   o=createOscillator(),
   g=createGain(),
-  g.gain.value=.01,
   o.connect(g),
   g.connect(destination),
-  o.frequency.value=f*=i<58?1:Math.pow(1.06,[0,0,4,-4][i%4]),
+  o.frequency.value=i<58||i%4?220:277,
+  g.gain.value=.01,
   o.start(t+=.11),
   o.stop(t+=.11)
 }
