@@ -440,7 +440,7 @@ with(new AudioContext)
         connect(g),
         g.connect(destination),
         frequency.value=f*=Math.pow(1.06,d.charCodeAt(i++)-50),
-        g.gain.value=.005,
+        g.gain.value=.1,
         start(t),
         stop(t+=.11*(d.charCodeAt(i)-50)),
         setTimeout('b.style.background="hsl('+i*9+',50%,50%)"',t*1e3)
@@ -452,7 +452,7 @@ for(t=12,i=0;i<720;i++)
     connect(g),
     g.connect(destination),
     frequency.value=i<58|i%4?220:277,
-    g.gain.value=.01,
+    g.gain.value=.05,
     start(t+=.11),
     stop(t+=.11)
 </script>
